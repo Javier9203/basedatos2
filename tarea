@@ -1,0 +1,25 @@
+CREATE table PELICULA (ID_PELICULA INTEGER , 
+    TITULO varchar2 (120), 
+    SINOPSIS varchar2(120),
+    CLASIFICACION varchar2(5),
+    constraint PK_ID_PELICULA primary key (ID_PELICULA)
+    );
+    
+    DESCRIBE PELICULA;
+    
+    CREATE TABLE HORARIO (ID_HORARIO integer, 
+    ID_PELICULAHORA integer,
+    HORARIO varchar2(8),
+    constraint PK_ID_HORARIO primary key (ID_HORARIO),
+    CONSTRAINT FK1_ID_PELICULA FOREIGN KEY  (ID_PELICULA) REFERENCES PELICULA (ID_PELICULA)
+    ); 
+    
+    CREATE TABLE SALA (ID_SALA integer,
+    ID_PELICULA INTEGER,
+    NUM_SALA varchar2 (8),
+    constraint PK_ID_SALA primary key (ID_SALA),
+    constraint FK2_ID_PELICULA FOREIGN KEY  (ID_PELICULA) REFERENCES PELICULA (ID_PELICULA)
+    );
+    
+    
+    
