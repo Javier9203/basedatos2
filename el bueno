@@ -56,4 +56,6 @@ CREATE table PELICULA (ID_PELICULA INTEGER ,
    create sequence sec_pelicula
    start with 1
    increment by 1
-   nomaxvalue
+   nomaxvalue;
+   
+   --DESCRIBE HORARIO;
