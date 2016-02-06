@@ -1,0 +1,37 @@
+create table simple1(id_simple integer, edad integer, nombre varchar2(40));
+--llenamos con informacion rapida 
+
+declare 
+mi_edad integer;
+begin
+ mi_edad:=20;
+ for i in 1..20 loop
+ mi_edad:=mi_edad+i;
+  insert into simple1 values(i,mi_edad,'juan carlos');
+  end loop;
+  end;
+  /
+ 
+ select *from simple1;
+ 
+ set serveroutput on;
+ update simple1 set nombre='juan' where edad=21;
+ 
+ declare 
+ mi_nombre varchar2(40);
+ begin
+ --cursor de una sola ocurrencia
+ select nombre into mi_nombre from simple1 where edad=21;
+ 
+ DBMS_OUTPUT.PUT_LINE(mi_nombre);
+ end;
+ /
+ 
+ select *from simple1;
+ 
+ delete from simple1;
+ 
+ insert into simple1 values (1,21,'juan');
+ insert into simple1 values (2,23,'ana');
+ insert into simple1 values (3,25,'pedro');
+ 
