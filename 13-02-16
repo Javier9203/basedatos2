@@ -1,0 +1,18 @@
+-cursores explisitos con multiples ocurrencias
+
+--objetivo del curso: hacer un sisstema sistribuido datacentrico usando oracle.
+      --debe incluir: minimo 3 tablas normalizadas
+                      minimo 3 operaciones de insercion
+                      minimo 3 operaciones de actualizacion               + interfaz de usuario
+                      minimo 3 operaciones de busqueda por ID
+                      minimo 3 operaciones de busqueda de todos
+                      minimo 3 operaciones de borrado ID
+
+
+1-configurar los servidores de aplicacion:
+configurar puerto hhtp: 8095 server.xml
+activar el usuario tomcatjunto asus privilegios(tomcat-users.xml)
+2-arranar el tomcat y ver que toso salga bien
+   bin->startup.bat->arrancar
+        shutdown.bat->stop
+3-probar tomcat en la red local
